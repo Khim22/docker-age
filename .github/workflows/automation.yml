@@ -1,8 +1,9 @@
 name: Dockerize docker-age
-# on:
-#   push:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
+      - github-action-ci
 jobs:
   build:
     runs-on: ubuntu-latest
