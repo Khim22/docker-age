@@ -25,4 +25,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: kyotokodocker/docker-age:latest, kyotokodocker/docker-age:distroless-debian_agev1.1.1 
+        tags: kyotokodocker/docker-age:latest, kyotokodocker/docker-age:${{ env.TAG_PREFIX }}_age${{ env.AGE_VERSION }} 
+        build-args: |
+          IMAGE_NAME=${{ env.IMAGE }}
+          AGE_VERSION=${{ env.AGE_VERSION }} 
