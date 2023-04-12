@@ -13,6 +13,6 @@ FROM ${IMAGE_NAME}
 
 COPY --from=builder /age/age /usr/bin
 WORKDIR /usr/bin
-USER nobody
+USER nonroot
 
 CMD ["age"]
